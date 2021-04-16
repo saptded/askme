@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+	<title>Sticky Footer Navbar Template · Bootstrap v5.0</title> 
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+
+
+	<!-- Custom styles for this template -->
+	<link href="css/my.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+
+	<header>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container">
+				<div class="col-4">
+					<a class="navbar-brand title" href="#">AskMe</a>
+				</div>
+				<div class="col-4">
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btnbtn-secondary" type="submit">Search</button>
+					</form>
+				</div>
+				<div class="col-4">
+					<div class="container" id="main-info">
+						<div class="row">
+							<div class="col-9">
+								<div class="container">
+									<div class="row" id="name">
+										<div>Alexey K.</div>
+									</div>
+									<div class="d-grid gap-2 d-md-block">
+										<a href="#" class="btn btn-dark func-btn">settings</a>
+										<a href="#" class="btn btn-dark func-btn">log out</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<img class="avatar" src="img/avatar.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+	<!-- Begin page content -->
+	<main class="flex-shrink-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-8 page">
+					<div class="row quest-head">
+						<div class="col-6">
+							<em class="title">Log In</em>
+						</div>
+					</div>
+
+					<div class="row login">
+						<div class="row">
+							<div class="col-2">
+								<label class="col-form-label">Email address</label>
+							</div>
+							<div class="col-6">
+								<div class="mb-3 log-field">
+									<input type="email" class="form-control" placeholder="name@example.com">
+								</div>
+							</div>
+							<!-- <div class="col-4 col-form-label" style="color: red;">error</div> -->
+						</div>
+						<div class="row">
+							<div class="col-2">
+								<label for="inputPassword" class="col-form-label">Password</label>
+							</div>
+							<div class="col-6">
+								<div class="mb-3 log-field">
+									<input type="password" class="form-control" id="inputPassword">
+								</div>
+							</div>
+							<!-- <div class="col-4 col-form-label" style="color: red;">error</div> -->
+						</div>
+						<div class="row">
+							<div class="col-2">
+							</div>
+							<div class="col-6">
+								<button type="submit" class="btn btn-outline-dark" style="margin: -5px 0px 15px;">Login</button>
+							</div>
+							<div class="col-4 col-form-label" style="color: red;">
+								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-2">
+							</div>
+							<div class="col-6">
+								<a href="#">create a new account</a>
+							</div>
+							<div class="col-4 col-form-label" style="color: red;">
+								
+							</div>
+						</div>
+					</div>
+
+					
+
+
+
+				</div>
+
+
+
+				<div class="col-4" id="site-info">
+					<div class="row" style="margin: 20px 0px;">
+						<em class="title">Popular tags</em>
+					</div>
+					<div class="row pop-tags">
+						<div class="row">
+							<div class="col-4"><a href="#" class="tag" id="pip">pip</a></div>
+							<div class="col-4"><a href="#" class="tag" id="vim">vim</a></div>
+							<div class="col-4"><a href="#" class="tag" id="segfault">segfault</a></div>
+						</div>
+						<div class="row">
+							<div class="col-4"><a href="#" class="tag" id="algorithm">algorithm</a></div>
+							<div class="col-4"><a href="#" class="tag" id="opencv">opencv</a></div>
+							<div class="col-4"><a href="#" class="tag" id="apach">apach</a></div>
+						</div>
+						<div class="row">
+							<div class="col-4"><a href="#" class="tag" id="async">async</a></div>
+							<div class="col-4"><a href="#" class="tag" id="telegram">telegram</a></div>
+							<div class="col-4"><a href="#" class="tag" id="new-side">new side</a></div>
+						</div>					
+					</div>
+					<div class="row site-info" style="margin: 20px 0px;">
+						<em class="title">Best members</em>
+					</div>
+					<div class="best-memb">
+						<ul>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+						</ul>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer mt-auto py-3 bg-light">
+		<div class="container">
+			<span class="text-muted">the worst question is an unasked question</span>
+		</div>
+	</footer>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

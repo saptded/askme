@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+	<title>Sticky Footer Navbar Template · Bootstrap v5.0</title> 
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		.bd-placeholder-img {
+			font-size: 1.125rem;
+			text-anchor: middle;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			user-select: none;
+		}
+
+		@media (min-width: 768px) {
+			.bd-placeholder-img-lg {
+				font-size: 3.5rem;
+			}
+		}
+	</style>
+
+
+	<!-- Custom styles for this template -->
+	<link href="css/my.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+
+	<header>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<div class="container">
+				<div class="col-4">
+					<a class="navbar-brand title" href="#">AskMe</a>
+				</div>
+				<div class="col-4">
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btnbtn-secondary" type="submit">Search</button>
+					</form>
+				</div>
+				<div class="col-4">
+					<div class="container" id="main-info">
+						<div class="row">
+							<div class="col-9">
+								<div class="container">
+									<div class="row" id="name">
+										<div>Alexey K.</div>
+									</div>
+									<div class="d-grid gap-2 d-md-block">
+										<a href="#" class="btn btn-dark func-btn">settings</a>
+										<a href="#" class="btn btn-dark func-btn">log out</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-3">
+								<img class="avatar" src="img/avatar.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</nav>
+	</header>
+
+	<!-- Begin page content -->
+	<main class="flex-shrink-0">
+		<div class="container">
+			<div class="row">
+				<div class="col-8 page">
+					<div class="row open-question">
+						<div class="col-2">
+							<img class="avatar" src="img/avatar.jpg">
+							<div class="number">
+								<button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+										<path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+									</svg>
+								</button>
+								<input type="number" min="0" value="0" readonly>
+								<button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+										<path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="col-10">
+							<p style="margin: 0px"><a href="#" class="topic-thm">Lorem ipsum dolor sit amet.</a></p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Putas viveremus.
+							Interpretaris interesset quodsi paene disputata ullum, turma plane consequuntur illa.
+							Tutiorem magna politus mentitum nullae procedat zenonem aiebat cur concupiscunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Partem turbulentaeque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, curis.
+							Recordatione voluptatis statue iracundia, sane musicis dare numeranda cui bello.
+							<p>
+								<div class="row">
+									<div class="col">
+										<span>
+											Tags:
+											<a href="#" class="topic-btn">tag1</a>
+											<a href="#" class="topic-btn">tag2</a>
+										</span>
+									</div>
+								</div>
+							</p>
+						</div>
+					</div>
+					<hr>
+
+
+					<div class="row question">
+						<div class="row">
+							<div class="col-2" style="padding: 0px 25px; margin: 5px 0px;">
+								<img class="avatar" src="img/avatar.jpg">
+								<div class="number">
+									<button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+											<path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+										</svg>
+									</button>
+									<input type="number" min="0" value="0" readonly>
+									<button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+											<path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="col-10">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Putas viveremus.
+								Interpretaris interesset quodsi paene disputata ullum, turma plane consequuntur illa.
+								Tutiorem magna politus mentitum nullae procedat zenonem aiebat cur concupiscunt.
+								<div style="margin-top: 50px;">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+										<label class="form-check-label" for="flexCheckDefault">
+											Correct
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row question">
+						<div class="row">
+							<div class="col-2" style="padding: 0px 25px; margin: 5px 0px;">
+								<img class="avatar" src="img/avatar.jpg">
+								<div class="number">
+									<button class="number-minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+											<path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+										</svg>
+									</button>
+									<input type="number" min="0" value="0" readonly>
+									<button class="number-plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+											<path d="M7.247 4.86l-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+										</svg>
+									</button>
+								</div>
+							</div>
+							<div class="col-10">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Putas viveremus.
+								Interpretaris interesset quodsi paene disputata ullum, turma plane consequuntur illa.
+								Tutiorem magna politus mentitum nullae procedat zenonem aiebat cur concupiscunt.
+								<div style="margin-top: 50px;">
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+										<label class="form-check-label" for="flexCheckDefault">
+											Correct
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav aria-label="Page navigation example">
+						<ul class="pagination">
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Previous">
+									<span aria-hidden="true">&laquo;</span>
+								</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">1</a></li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#" aria-label="Next">
+									<span aria-hidden="true">&raquo;</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<hr>
+
+					<div class="row" style="text-align: left;">
+						<form>
+							<div class="mb-3">
+								<textarea class="form-control field" style="height: 100px;" placeholder="Enter your answer here"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-outline-dark" style="margin: -5px 0px 15px;">Submit</button>
+						</form>
+
+					</div>
+
+
+				</div>
+
+
+
+				<div class="col-4" id="site-info">
+					<div class="row" style="margin: 20px 0px;">
+						<em class="title">Popular tags</em>
+					</div>
+					<div class="row pop-tags">
+						<div class="row">
+							<div class="col-4"><a href="#" class="tag" id="pip">pip</a></div>
+							<div class="col-4"><a href="#" class="tag" id="vim">vim</a></div>
+							<div class="col-4"><a href="#" class="tag" id="segfault">segfault</a></div>
+						</div>
+						<div class="row">
+							<div class="col-4"><a href="#" class="tag" id="algorithm">algorithm</a></div>
+							<div class="col-4"><a href="#" class="tag" id="opencv">opencv</a></div>
+							<div class="col-4"><a href="#" class="tag" id="apach">apach</a></div>
+						</div>
+						<div class="row">
+							<div class="col-4"><a href="#" class="tag" id="async">async</a></div>
+							<div class="col-4"><a href="#" class="tag" id="telegram">telegram</a></div>
+							<div class="col-4"><a href="#" class="tag" id="new-side">new side</a></div>
+						</div>					
+					</div>
+					<div class="row site-info" style="margin: 20px 0px;">
+						<em class="title">Best members</em>
+					</div>
+					<div class="best-memb">
+						<ul>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+							<li><a href="#" class="memb">alex</a></li>
+						</ul>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer mt-auto py-3 bg-light">
+		<div class="container">
+			<span class="text-muted">the worst question is an unasked question</span>
+		</div>
+	</footer>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
