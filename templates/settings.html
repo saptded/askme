@@ -1,0 +1,117 @@
+{% extends "include/base.html" %}
+{% load static %}
+
+{% block head %}
+    <div class="row quest-head">
+        <div class="col-6">
+            <em class="title">Settings</em>
+        </div>
+
+    </div>
+{% endblock head %}
+
+{% block content %}
+        <div class="row login">
+        <div class="row">
+            <div class="col-3">
+                <label class="col-form-label">login</label>
+            </div>
+            <div class="col-6">
+                <div class="mb-3 log-field">
+                    <input type="login" class="form-control">
+                </div>
+            </div>
+            <div class="col-3 col-form-label" style="color: red;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <label class="col-form-label">email</label>
+            </div>
+            <div class="col-6">
+                <div class="mb-3 log-field">
+                    <input type="email" class="form-control">
+                </div>
+            </div>
+            <div class="col-3 col-form-label" style="color: red;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <label class="col-form-label">nickname</label>
+            </div>
+            <div class="col-6">
+                <div class="mb-3 log-field">
+                    <input type="login" class="form-control">
+                </div>
+            </div>
+            <div class="col-3 col-form-label" style="color: red;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <label for="inputPassword" class="col-form-label">upload avatar</label>
+            </div>
+            <div class="col-6">
+                <img class="avatar" src="{% static "img/avatar.jpg" %}">
+            </div>
+            <div class="col-3 col-form-label" style="color: red;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <label for="inputPassword" class="col-form-label"></label>
+            </div>
+            <div class="col-6">
+            </div>
+            <div class="col-3 col-form-label" style="color: red;"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-3">
+                <label for="inputPassword" class="col-form-label"></label>
+            </div>
+            <div class="col-3">
+                <div class="mb-3" style="width: 210px;">
+                    <input class="form-control">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="mb-3 log-field col-form-label">
+                    <button type="submit" class="btn btn-outline-dark" style="margin: -6px 12px 15px;">
+                        choose
+                    </button>
+                </div>
+            </div>
+            <div class="col-3 col-form-label" style="color: red;"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col-3">
+                <button type="submit" class="btn btn-outline-dark" style="margin: -20px 0px 15px;">Save
+                </button>
+            </div>
+            <div class="col-3">
+            </div>
+            <div class="col-3 col-form-label" style="color: red;"></div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+{% block paginator %}
+
+{% endblock paginator %}
+
+{% block pop_tags %}
+    {% for pop_tag in pop_tags %}
+        {% include "include/pop_tags.html" %}
+    {% endfor %}
+{% endblock pop_tags %}
+
+
+

@@ -1,0 +1,28 @@
+{% load static %}
+<div class="row open-question">
+    <div class="col-2">
+        <img class="avatar" src="{% static "img/avatar.jpg" %}">
+        <div class="number">
+            <button class="number-minus btn btn-primary" type="button">like</button>
+            <input type="number" min="0" value="0" readonly>
+        </div>
+    </div>
+    <div class="col-10">
+        <p style="margin: 0px"><a href="#" class="topic-thm">{{ question.title }}</a></p>
+        <div>
+            {{ question.text }}
+        </div>
+        <p>
+        <div class="row">
+            <div class="col">
+                <span>
+                    Tags:
+                    <a href="{% url "tag_page" tag=question.tag %}" class="topic-btn">{{ question.tag }}</a>
+                    <a href="{% url "tag_page" tag=question.tag %}" class="topic-btn">{{ question.tag }}</a>
+                    <a href="{% url "tag_page" tag=question.tag %}" class="topic-btn">{{ question.tag }}</a>
+                </span>
+            </div>
+        </div>
+        </p>
+    </div>
+</div>

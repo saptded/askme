@@ -1,0 +1,212 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <title>askme</title>
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/my.css" %}" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+
+{% include "include/navbar.html" %}
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 page">
+                <div class="row quest-head">
+                    <div class="col-6">
+                        <em class="title">New Questions</em>
+                    </div>
+                    <div class="col-6" id="hot-qst">
+                        <a href="#">hot questions</a>
+                    </div>
+                </div>
+
+                <div class="row question">
+                    <div class="row">
+                        <div class="col-2" style="padding: 0px 25px; margin: 5px 0px;">
+
+                            <img class="avatar" src="{% static "img/avatar.jpg" %}">
+                            <div class="number">
+                                <button class="number-minus btn btn-primary" type="button">like</button>
+                                <button class="number-plus btn btn-primary" type="button">dislike</button>
+                                <input type="number" min="0" value="0" readonly>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <p style="margin: 0px"><a href="#" class="topic-thm">THEME1</a></p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Putas viveremus.
+                            Interpretaris interesset quodsi paene disputata ullum, turma plane consequuntur illa.
+                            Tutiorem magna politus mentitum nullae procedat zenonem aiebat cur concupiscunt.
+                            <div class="row topic-meta-info">
+                                <div class="col-6">
+                                    <a href="#" class="topic-btn">answers(3)</a>
+                                </div>
+                                <div class="col-6">
+										<span>
+											Tags:
+											<a href="#" class="topic-btn">tag1</a>
+											<a href="#" class="topic-btn">tag2</a>
+										</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row question">
+                    <div class="row">
+                        <div class="col-2" style="padding: 0px 25px; margin: 5px 0px;">
+                            <img class="avatar" src="{% static "img/avatar.jpg" %}">
+                            <div class="number">
+                                <button class="number-minus btn btn-primary" type="button">like</button>
+                                <button class="number-plus btn btn-primary" type="button">dislike</button>
+                                <input type="number" min="0" value="0" readonly>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <p style="margin: 0px"><a href="#" class="topic-thm">THEME1</a></p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Putas viveremus.
+                            Interpretaris interesset quodsi paene disputata ullum, turma plane consequuntur illa.
+                            Tutiorem magna politus mentitum nullae procedat zenonem aiebat cur concupiscunt.
+                            <div class="row topic-meta-info">
+                                <div class="col-6">
+                                    <a href="#" class="topic-btn">answers(3)</a>
+                                </div>
+                                <div class="col-6">
+										<span>
+											Tags:
+											<a href="#" class="topic-btn">tag1</a>
+											<a href="#" class="topic-btn">tag2</a>
+										</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row question">
+                    <div class="row">
+                        <div class="col-2" style="padding: 0px 25px; margin: 5px 0px;">
+                            <img class="avatar" src="{% static "img/avatar.jpg" %}">
+                            <div class="number">
+                                <button class="number-minus btn btn-primary" type="button">like</button>
+                                <button class="number-plus btn btn-primary" type="button">dislike</button>
+                                <input type="number" min="0" value="0" readonly>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <p style="margin: 0px"><a href="#" class="topic-thm">THEME1</a></p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Putas viveremus.
+                            Interpretaris interesset quodsi paene disputata ullum, turma plane consequuntur illa.
+                            Tutiorem magna politus mentitum nullae procedat zenonem aiebat cur concupiscunt.
+                            <div class="row topic-meta-info">
+                                <div class="col-6">
+                                    <a href="#" class="topic-btn">answers(3)</a>
+                                </div>
+                                <div class="col-6">
+										<span>
+											Tags:
+											<a href="#" class="topic-btn">tag1</a>
+											<a href="#" class="topic-btn">tag2</a>
+										</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="col-4" id="site-info">
+                <div class="row" style="margin: 20px 0px;">
+                    <em class="title">Popular tags</em>
+                </div>
+                <div class="row pop-tags">
+                    <div class="row">
+                        <div class="col-4"><a href="#" class="tag" id="pip">pip</a></div>
+                        <div class="col-4"><a href="#" class="tag" id="vim">vim</a></div>
+                        <div class="col-4"><a href="#" class="tag" id="segfault">segfault</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><a href="#" class="tag" id="algorithm">algorithm</a></div>
+                        <div class="col-4"><a href="#" class="tag" id="opencv">opencv</a></div>
+                        <div class="col-4"><a href="#" class="tag" id="apach">apach</a></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4"><a href="#" class="tag" id="async">async</a></div>
+                        <div class="col-4"><a href="#" class="tag" id="telegram">telegram</a></div>
+                        <div class="col-4"><a href="#" class="tag" id="new-side">new side</a></div>
+                    </div>
+                </div>
+                <div class="row site-info" style="margin: 20px 0px;">
+                    <em class="title">Best members</em>
+                </div>
+                <div class="best-memb">
+                    <ul>
+                        <li><a href="#" class="memb">alex</a></li>
+                        <li><a href="#" class="memb">alex</a></li>
+                        <li><a href="#" class="memb">alex</a></li>
+                        <li><a href="#" class="memb">alex</a></li>
+                        <li><a href="#" class="memb">alex</a></li>
+                        <li><a href="#" class="memb">alex</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">the worst question is an unasked question</span>
+    </div>
+</footer>
+
+
+<script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+
+
+</body>
+</html>

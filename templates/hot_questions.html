@@ -1,0 +1,24 @@
+{% extends "include/base.html" %}
+
+{% block head %}
+    <div class="row quest-head">
+        <div class="col-6">
+            <em class="title">Hot Questions</em>
+        </div>
+        <div class="col-6" id="hot-qst">
+            <a href="/">new questions</a>
+        </div>
+    </div>
+{% endblock head %}
+
+{% block content %}
+    {% for question in questions %}
+        {% include "include/question.html" %}
+    {% endfor %}
+{% endblock content %}
+
+{% block pop_tags %}
+    {% for pop_tag in pop_tags %}
+        {% include "include/pop_tags.html" %}
+    {% endfor %}
+{% endblock pop_tags %}

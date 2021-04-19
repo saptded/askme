@@ -1,0 +1,237 @@
+main > .container {
+    padding: 150px 15px 0;
+    text-align: center;
+}
+
+footer > div {
+    text-align: center;
+}
+
+.title {
+    font-size: 300%
+}
+
+#main-info {
+    text-align: right;
+    margin: 10px;
+}
+
+#name {
+    font-size: 125%;
+    color: white;
+    margin: 20px 0px 0px 0px;
+
+}
+
+.func-btn {
+    font-size: 70%;
+    margin: 10px 0px 0px 0px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border: 3px solid blue;
+    border-radius: 15px;
+    margin: 0px 0px 0px -7px;
+}
+
+.pop-tag {
+    color: red;
+    font-size: 150%;
+    text-decoration: none;
+}
+
+.question {
+    font-size: 95%;
+    border: 3px grey solid;
+    padding: 15px 1px;
+    text-align: left;
+    height: 175px;
+    border-radius: 15px;
+    margin: 15px 0px;
+}
+
+.topic-thm {
+    font-size: 150%;
+    color: black;
+    text-decoration: none;
+    margin: 0px;
+}
+
+.topic-meta-info {
+    margin: 15px 0px;
+    border: 1px black solid;
+    padding: 3px;
+    border-radius: 5px;
+    color: black;
+}
+
+.quest-head {
+    text-align: left;
+    margin: -5px 0px;
+}
+
+#hot-qst {
+    padding: 30px 0px;
+    text-decoration: solid;
+}
+
+.topic-btn {
+    color: grey;
+}
+
+#site-info {
+    text-align: left;
+    padding: 0px 0px 0px 25px;
+}
+
+.pop-tags {
+    padding: 0px 10px;
+}
+
+#pip {
+    font-size: 150%;
+    color: black;
+}
+
+#vim {
+    font-size: 200%;
+    color: blue;
+}
+
+#segfault {
+    font-size: 250%;
+    color: green;
+}
+
+#algorithm {
+    font-size: 170%;
+    color: red;
+}
+
+#opencv {
+    font-size: 180%;
+    color: black;
+}
+
+#apach {
+    font-size: 190%;
+    color: teal;
+}
+
+#async {
+    font-size: 130%;
+    color: black;
+}
+
+#telegram {
+    font-size: 160%;
+    color: coral;
+}
+
+#new-side {
+    font-size: 145%;
+    color: black;
+}
+
+.best-memb {
+    padding: 0px 0px 0px 20px;
+    font-size: 160%;
+}
+
+.new-question-field {
+    margin: 15px -50px;
+    width: 870px;
+}
+
+#text-field {
+    height: 200px;
+}
+
+.field {
+    border: 2px black solid;
+    resize: none;
+}
+
+.tag {
+    text-decoration: none;
+}
+
+.counter {
+    border: 1px solid black;
+}
+
+.open-question {
+    text-align: left;
+    margin: 35px 0px
+}
+
+.page {
+    width: 870px;
+}
+
+.login {
+    text-align: -webkit-auto;
+    margin-top: 40px;
+}
+
+.log-field {
+    width: 300px;
+}
+
+.number {
+    display: inline-block;
+    position: relative;
+    margin: 10px 0px 0px 0px;
+    width: 75px;
+}
+
+.number input[type="number"] {
+    display: block;
+    height: 30px;
+    line-height: 32px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    appearance: textfield;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: right;
+    padding: 10px;
+}
+
+.number input[type="number"]::-webkit-outer-spin-button,
+.number input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.number-minus {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    width: 40px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    border-right: 1px solid #ddd;
+    font-size: 13px;
+}
+
+.number-plus {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    width: 40px;
+    padding: 0;
+    display: block;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #ddd;
+    font-size: 13px;
+}

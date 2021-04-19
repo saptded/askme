@@ -130,3 +130,6 @@ dmypy.json
 
 venv/
 node_modules/
+.idea/
+*.pyc
+__pycache__/

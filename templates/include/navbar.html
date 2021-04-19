@@ -1,0 +1,47 @@
+{% load static %}
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container" style="height: 90px;">
+            <div class="col-2">
+                <a class="navbar-brand title" href="/">AskMe</a>
+            </div>
+            <div class="col-4">
+                <form class="d-flex" style="margin: 0px 0px 0px -110px">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-dark" type="submit">Search</button>
+
+                </form>
+            </div>
+            <div class="col-1">
+                <form action="/ask">
+                    <button class="btn btn-danger" type="submit"
+                            style="width: 100px;height: 40px;font-size: 20px;margin: 0px 0px 0px 80px;">
+                        <a href="/ask" style="text-decoration: none; color: black;">ASK</a>
+                    </button>
+                </form>
+            </div>
+            <div class="col-3">
+                <div class="container" id="main-info">
+                    <div class="row">
+                        <div class="col-9">
+                            <div class="container">
+                                <div class="row" id="name">
+                                    <div>Alexey K.</div>
+                                </div>
+                                <div class="d-grid gap-2 d-md-block">
+                                    <a href="/settings" class="btn btn-dark func-btn">settings</a>
+                                    <a href="/login" class="btn btn-dark func-btn">login</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <img class="avatar" src="{% static "img/avatar.jpg" %}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
