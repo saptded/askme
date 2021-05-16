@@ -142,24 +142,24 @@
                 {% endblock content %}
 
                 {% block paginator %}
-                    <div class="pagination" style="color: blue">
-        <span class="step-links">
-            {% if questions.has_previous %}
-                <a href="?page={{ questions.previous_page_number }}" class="btn btn-sm btn-lg active" role="button"
-                   aria-pressed="true">previous</a>
-            {% endif %}
-
-            <span class="current">
-                Page {{ questions.number }} of {{ questions.paginator.num_pages }}.
-            </span>
-
-            {% if questions.has_next %}
-                <a href="?page={{ questions.next_page_number }}" class="btn btn-sm btn-lg active" role="button"
-                   aria-pressed="true">next</a>
-            {% endif %}
-        </span>
-                    </div>
-
+                    {#                    <div class="pagination" style="color: blue">#}
+                    {#        <span class="step-links">#}
+                    {#            {% if questions.has_previous %}#}
+                    {#                <a href="?page={{ questions.previous_page_number }}" class="btn btn-sm btn-lg active" role="button"#}
+                    {#                   aria-pressed="true">previous</a>#}
+                    {#            {% endif %}#}
+                    {##}
+                    {#            <span class="current">#}
+                    {#                Page {{ questions.number }} of {{ questions.paginator.num_pages }}.#}
+                    {#            </span>#}
+                    {##}
+                    {#            {% if questions.has_next %}#}
+                    {#                <a href="?page={{ questions.next_page_number }}" class="btn btn-sm btn-lg active" role="button"#}
+                    {#                   aria-pressed="true">next</a>#}
+                    {#            {% endif %}#}
+                    {#        </span>#}
+                    {#                    </div>#}
+                    {##}
                 {% endblock paginator %}
 
             </div>

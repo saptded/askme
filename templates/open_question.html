@@ -6,11 +6,13 @@
 
 {% block content %}
     {% include "include/open_question.html" %}
+
     <hr>
-    {% for question in questions %}
+    {% for comment in comments %}
         {% include "include/answer.html" %}
     {% endfor %}
     <hr>
+
     <div class="row" style="text-align: left;">
         <form>
             <div class="mb-3">
@@ -23,12 +25,15 @@
         </form>
 
     </div>
+
 {% endblock content %}
 
+{% block paginator %}
+    {% include "include/pagination.html" %}
+{% endblock paginator %}
+
 {% block pop_tags %}
-    {% for pop_tag in pop_tags %}
-        {% include "include/pop_tags.html" %}
-    {% endfor %}
+    {% include "include/pop_tags.html" %}
 {% endblock pop_tags %}
 
 

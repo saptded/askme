@@ -8,7 +8,9 @@
 
 
 {% block pop_tags %}
-{#    {% for tag in tags %}#}
-        {% include "include/pop_tags.html" %}
-{#    {% endfor %}#}
+    {% include "include/pop_tags.html" %}
 {% endblock pop_tags %}
+
+{% block paginator %}
+    {% include "include/pagination.html" %}
+{% endblock paginator %}

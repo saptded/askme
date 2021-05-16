@@ -6,12 +6,12 @@
             <img class="avatar" src="{% static "img/avatar.jpg" %}">
             <div class="number">
                 <button class="number-minus btn btn-primary" type="button">like</button>
-                <input type="number" min="0" value="{{ question.rating }}" readonly>
+                <input type="number" min="0" value="{{ question.votes.likes.count }}" readonly>
             </div>
         </div>
         <div class="col-10">
             <p style="margin: 0px">
-                <a href="{% url "open_question" pk=question.id %}" class="topic-thm">
+                <a href="{% url "open_question" qid=question.id %}" class="topic-thm">
                     {{ question.question_title }}
                 </a>
             </p>
@@ -19,17 +19,20 @@
                 {{ question.question_text }}
             </div>
             <div class="row topic-meta-info">
-{#                <div class="col-6">#}
-{#                    <a href="#" class="topic-btn">answers({{ question.answers }})</a>#}
-{#                </div>#}
-                <div >
+
+                <div>
                     <span>
                         Tags:
-{#                        <a href="{% url "tag_page" tag=question.tag %}" class="topic-btn">{{ question.tag }}</a>#}
-{#                        <a href="{% url "tag_page" tag=question.tag1 %}" class="topic-btn">{{ question.tag1 }}</a>#}
-{#                        <a href="{% url "tag_page" tag=question.tag2 %}" class="topic-btn">{{ question.tag2 }}</a>#}
+                        {% for tag in question.tags.all %}
+                            <a class="pop-tag" href="{% url 'tag' tid=tag %}" class="btn-light btn-sm"> {{ tag }} </a>
+                        {% endfor %}
+
+                        <small class="text-muted">Published: {{ question.pub_date }}</small>
                     </span>
+
+
                 </div>
+
             </div>
         </div>
     </div>

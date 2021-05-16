@@ -4,22 +4,24 @@
         <img class="avatar" src="{% static "img/avatar.jpg" %}">
         <div class="number">
             <button class="number-minus btn btn-primary" type="button">like</button>
-            <input type="number" min="0" value="0" readonly>
+            <input type="number" min="0" value="{{ question.votes.likes.count }}" readonly>
         </div>
     </div>
     <div class="col-10">
-        <p style="margin: 0px"><a href="#" class="topic-thm">{{ question.title }}</a></p>
+        <p style="margin: 0px"><a href="#" class="topic-thm">{{ question.question_title }}</a></p>
+        <h4>Автор: {{ question.question_author }}</h4>
         <div>
-            {{ question.text }}
+            {{ question.question_text }}
         </div>
         <p>
         <div class="row">
             <div class="col">
                 <span>
                     Tags:
-                    <a href="{% url "tag_page" tag=question.tag %}" class="topic-btn">{{ question.tag }}</a>
-                    <a href="{% url "tag_page" tag=question.tag %}" class="topic-btn">{{ question.tag }}</a>
-                    <a href="{% url "tag_page" tag=question.tag %}" class="topic-btn">{{ question.tag }}</a>
+                    {% for tag in question_tags %}
+                        <a class="pop-tag" href="{% url 'tag' tid=tag %}"
+                           class="btn-light btn-sm"> {{ tag.tag_title }} </a>
+                    {% endfor %}
                 </span>
             </div>
         </div>

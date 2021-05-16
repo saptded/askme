@@ -3,19 +3,15 @@ from __future__ import unicode_literals
 import _datetime
 import datetime
 
-from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
 from django.contrib.contenttypes.models import ContentType
 from django.db import models
+from django.db.models import Sum
 from django.utils import timezone
 
 
-# Create your models here.
-
-
 class Profile(models.Model):
-    # user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='profile', unique=True, on_delete=models.CASCADE)
     user = models.CharField(max_length=30, unique=True)
     avatar = models.ImageField(upload_to='uploads', default=None)
 
@@ -39,14 +35,17 @@ class LikeManager(models.Manager):
     def likes(self):
         return self.get_queryset().filter(vote__gt=0)
 
+    def sum_rating(self):
+        return self.get_queryset().aggregate(Sum('vote')).get('vote__sum') or 0
+
 
 class Like(models.Model):
     LIKE = 1
-    DISLIKE = -1
+    # DISLIKE = -1
 
     VOTES = (
         (LIKE, 'Like'),
-        (DISLIKE, 'Dislike')
+        # (DISLIKE, 'Dislike')
     )
 
     vote = models.SmallIntegerField(verbose_name="Голос", choices=VOTES)
@@ -55,6 +54,7 @@ class Like(models.Model):
     content_type = models.ForeignKey(ContentType, on_delete=models.CASCADE)
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey()
+
     objects = LikeManager()
 
 
@@ -63,7 +63,7 @@ class QuestionManager(models.Manager):
         return self.order_by('-pub_date')
 
     def hot(self):
-        return self.order_by('-rating')
+        return self.order_by('-votes')
 
     def get_tagged(self, tag_name):
         return self.filter(tags__name=tag_name)
@@ -92,9 +92,7 @@ class Question(models.Model):
     is_active = models.BooleanField(default=True, verbose_name=u"Доступность вопроса")
 
     tags = models.ManyToManyField(Tag, blank=True)
-    likes = GenericRelation(Like, related_query_name='question')
-
-    rating = models.IntegerField(default=0, db_index=True)
+    votes = GenericRelation(Like, related_query_name='question')
 
     def __str__(self):
         return self.question_text
@@ -110,14 +108,14 @@ class Question(models.Model):
     objects = QuestionManager()
 
 
-# модель ответа
-class Answer(models.Model):
+class Comment(models.Model):
     comment_author = models.ForeignKey(Profile, on_delete=models.CASCADE)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     comment_text = models.CharField(max_length=1000)
     pub_date = models.DateTimeField(default=timezone.now, verbose_name=u'date published')
 
     is_open = models.BooleanField(default=True)
+    votes = GenericRelation(Like, related_query_name='comment')
 
     def __str__(self):
         return self.comment_text

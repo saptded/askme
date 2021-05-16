@@ -11,7 +11,7 @@
 {% endblock head %}
 
 {% block content %}
-        <div class="row login">
+    <div class="row login">
         <div class="row">
             <div class="col-3">
                 <label class="col-form-label">login</label>
@@ -108,9 +108,7 @@
 {% endblock paginator %}
 
 {% block pop_tags %}
-    {% for pop_tag in pop_tags %}
-        {% include "include/pop_tags.html" %}
-    {% endfor %}
+    {% include "include/pop_tags.html" %}
 {% endblock pop_tags %}
 
 

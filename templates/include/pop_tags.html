@@ -2,21 +2,10 @@
 <div class="row pop-tags">
     <div class="row">
         {% for tag in tags %}
-            <a class="pop-tag" href="{% url 'tag' tid=tag.tag_title %}" class="btn-light btn-sm"> {{ tag.tag_title }} </a>
-
+            <a class="pop-tag" href="{% url 'tag' tid=tag.tag_title %}"
+               class="btn-light btn-sm"> {{ tag.tag_title }} </a>
         {% endfor %}
-        {#         <a href="{% url 'tag' tid=tag.tag_title %}" class="btn-light btn-sm"> {{tag.tag_title}} </a>#}
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag2 %}" class="pop-tag">{{ pop_tag.tag2 }}</a></div>#}
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag3 %}" class="pop-tag">{{ pop_tag.tag3 }}</a></div>#}
+
     </div>
-    <div class="row">
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag4 %}" class="pop-tag">{{ pop_tag.tag4 }}</a></div>#}
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag5 %}" class="pop-tag">{{ pop_tag.tag5 }}</a></div>#}
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag6 %}" class="pop-tag">{{ pop_tag.tag6 }}</a></div>#}
-    </div>
-    <div class="row">
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag7 %}" class="pop-tag">{{ pop_tag.tag7 }}</a></div>#}
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag8 %}" class="pop-tag">{{ pop_tag.tag8 }}</a></div>#}
-        {#        <div class="col-4"><a href="{% url "tag_page" tag=pop_tag.tag9 %}" class="pop-tag">{{ pop_tag.tag9 }}</a></div>#}
-    </div>
+
 </div>

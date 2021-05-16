@@ -1,7 +1,7 @@
 {% extends "include/base.html" %}
 
 {% block head %}
-      <div class="row quest-head">
+    <div class="row quest-head">
         <div class="col-6">
             <em class="title">New Question</em>
         </div>
@@ -43,9 +43,7 @@
 {% endblock content %}
 
 {% block pop_tags %}
-    {% for pop_tag in pop_tags %}
-        {% include "include/pop_tags.html" %}
-    {% endfor %}
+    {% include "include/pop_tags.html" %}
 {% endblock pop_tags %}
 
 {% block paginator %}
